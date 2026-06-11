@@ -1,7 +1,7 @@
 {
-  "buildCommand": "pnpm install && pnpm --filter @workspace/spam-wa-report run build",
+  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm run typecheck:libs && pnpm --filter @workspace/spam-wa-report run build",
   "outputDirectory": "artifacts/spam-wa-report/dist/public",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm install --no-frozen-lockfile",
   "framework": null,
   "env": {
     "PORT": "3000",
