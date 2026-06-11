@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Stats from "@/pages/stats";
+import BanFiles from "@/pages/ban-files";
 import { Shield, Github, Mail, Send } from "lucide-react";
 
 const queryClient = new QueryClient();
@@ -63,6 +64,13 @@ function Navigation() {
             data-testid="link-nav-stats"
           >
             Stats
+          </Link>
+          <Link
+            href="/ban-files"
+            className={`nav-pill ${location === "/ban-files" ? "active" : ""}`}
+            data-testid="link-nav-ban-files"
+          >
+            TXT Ban
           </Link>
         </div>
       </div>
@@ -134,6 +142,7 @@ function App() {
               <Switch>
                 <Route path="/" component={Home} />
                 <Route path="/stats" component={Stats} />
+                <Route path="/ban-files" component={BanFiles} />
                 <Route component={NotFound} />
               </Switch>
             </main>
