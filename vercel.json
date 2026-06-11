@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm install && pnpm --filter @workspace/spam-wa-report run build",
+  "outputDirectory": "artifacts/spam-wa-report/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "env": {
+    "PORT": "3000",
+    "BASE_PATH": "/"
+  }
+}
